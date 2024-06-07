@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import tailwindLogo from './assets/tailwind.svg'
+import { Button } from './components/atoms/Button'
 
 
 function App() {
@@ -23,9 +24,7 @@ function App() {
         </a>
         
       </div>
-      <button className='py-2.5 px-5 me-2 mb-2 text-sm font-medium text-slate-300 focus:outline-none bg-slate-800 rounded-lg border border-slate-600 hover:bg-slate-900 hover:text-slate-200 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700' onClick={() => setCount((count) => count + 1)}>
-          Contador:  {count}
-      </button>
+      <Button variant="default"  onClick={() => setCount((count) => count + 1)}>Contador: {count}</Button>
       <div className="m-8">
         
         <p className='mt-8'>
