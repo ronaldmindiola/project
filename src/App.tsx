@@ -32,7 +32,7 @@ function App() {
     setAnimateOut(true);
     setTimeout(() => {
       setCount(count + 1);
-    }, 300); // Cambia el estado del contador después de la animación de salida
+    }, 200); // Cambia el estado del contador después de la animación de salida
   };
   return (
     <>
