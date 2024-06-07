@@ -1,11 +1,27 @@
-# React + TypeScript + Vite
+# R82 Weather
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Weather te permite obtener información meteorológica actualizada para cualquier ubicación.
+Utiliza la API de OpenWeatherMap para obtener los datos del clima y muestra información como la temperatura, la humedad y una descripción del clima actual.
 
-Currently, two official plugins are available:
+## Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Búsqueda de clima por ciudad
+- Visualización de la temperatura actual, humedad y descripción del clima
+- Interfaz de usuario amigable y responsiva
+- Manejo de errores en caso de que la API no responda o la ciudad no sea encontrada
+
+## Tecnologías Utilizadas
+
+- React
+- TypeScript
+- Tailwind CSS para los componentes de la interfaz de usuario
+- Axios para las solicitudes HTTP
+- OpenWeatherMap API
+
+## Requisitos Previos
+
+- Node.js
+- npm o yarn
 
 ## Expanding the ESLint configuration
 
