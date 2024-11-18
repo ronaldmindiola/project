@@ -1,0 +1,155 @@
+# Project
+
+Este proyecto es un boilerplate para construir aplicaciones web.
+
+## Características
+
+## Tecnologías Utilizadas
+
+- **React**: Biblioteca de JavaScript para construir interfaces de usuario.
+- **Vite**: Herramienta de construcción rápida y ligera.
+- **Tailwind CSS**: Framework CSS para un desarrollo rápido y eficiente.
+- **Shadcn**: Conjunto de componentes UI.
+- **React Router**: Enrutador para aplicaciones React.
+- **tailwindcss-animate**: Animaciones para Tailwind CSS.
+
+## Requisitos Previos
+
+- Node.js
+- pnpm, npm o yarn
+
+## Instalación
+
+Primero, clona el repositorio:
+
+```bash
+git clone https://github.com/tu-usuario/tu-repositorio.git
+```
+
+Luego, navega a la carpeta del proyecto e instala las dependencias:
+
+```
+bash
+cd tu-repositorio
+npm install
+```
+
+## Uso
+Para iniciar el servidor de desarrollo:
+```
+npm run dev
+```
+
+Para construir la aplicación para producción:
+
+```
+npm run build
+```
+
+## Estructura del Proyecto
+
+plaintext
+.
+
+    ├── public          # Archivos estáticos
+    ├── src
+    │   ├── components  # Componentes reutilizables
+    │   │   ├── atoms
+    │   │   │   ├── avatar
+    │   │   ├── molecules
+    │   │   │   ├── navbar
+    │   │   ├── organisms
+    │   │   │   ├── hero
+    │   ├── pages       # Páginas de la aplicación
+    │   │   ├── index
+    │   │   ├── product
+    │   │   ├── about
+    │   │   ├── contact
+    │   ├── App.tsx     # Componente raíz
+    │   ├── index.css   # Estilos globales
+    │   ├── main.tsx    # Punto de entrada de la aplicación
+    ├── tailwind.config.cjs # Configuración de Tailwind CSS
+    ├── vite.config.ts  # Configuración de Vite
+    └── package.json    # Configuración del proyecto y dependencias
+
+## Configuración de Tailwind CSS
+La configuración de Tailwind CSS se encuentra en el archivo tailwind.config.cjs:
+```
+javascript
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [
+    require('tailwindcss-animate'),
+  ],
+}
+```
+## Ejemplo de Componente
+Aquí tienes un ejemplo de cómo usar los componentes con Shadcn y Tailwind CSS:
+
+```
+tsx
+// src/components/Button.tsx
+import React from 'react';
+import 'tailwindcss/tailwind.css';
+
+interface ButtonProps {
+  label: string;
+  onClick: () => void;
+}
+
+const Button: React.FC<ButtonProps> = ({ label, onClick }) => {
+  return (
+    <button className="bg-blue-500 text-white py-2 px-4 rounded animate-bounce" onClick={onClick}>
+      {label}
+    </button>
+  );
+};
+
+export default Button;
+```
+## Enrutamiento
+La configuración de React Router se encuentra en src/main.tsx:
+```
+tsx
+// src/main.tsx
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import App from './App';
+import './index.css';
+
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+  <React.StrictMode>
+    <Router>
+      <Routes>
+        <Route path="/" element={<App />} />
+      </Routes>
+    </Router>
+  </React.StrictMode>
+);
+```
+
+## Contribuyendo
+Si deseas contribuir a este proyecto, por favor, sigue estos pasos:
+
+ - Haz un fork del repositorio.
+
+ - Crea una rama con tu característica (git checkout -b mi-caracteristica).
+
+ - Haz commit de tus cambios (git commit -m 'Añade mi caracteristica').
+
+ - Sube tu rama (git push origin mi-caracteristica).
+
+ - Abre un Pull Request.
+
+¡Gracias por usar este boilerplate! Si tienes alguna pregunta o encuentras algún problema, no dudes en abrir un issue.
+
+## Licencia
+Este proyecto está bajo la Licencia MIT. Ver el archivo LICENSE para más detalles.
