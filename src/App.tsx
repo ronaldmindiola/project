@@ -36,7 +36,7 @@ function App() {
   return (
     <>
       <div className="flex flex-col h-screen items-center justify-center">
-        <h1 className="text-6xl font-black text-slate-700">R82 Seed.</h1>
+        <h1 className="text-6xl font-black text-slate-700">Project</h1>
         <div className="flex justify-center gap-4 py-6">
           <a href="https://vitejs.dev" target="_blank">
             <img src={viteLogo} className="p-4 h-20" alt="Vite logo" />
@@ -85,7 +85,7 @@ function App() {
           </p>
         </div>
         <a
-          href="https://github.com/ronaldmindiola/r82-seed"
+          href="https://github.com/ronaldmindiola/project"
           className="read-the-docs"
         >
           Click aquí para obtener más información.
